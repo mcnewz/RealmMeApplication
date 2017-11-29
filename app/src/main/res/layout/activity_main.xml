@@ -5,18 +5,37 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
-        android:id="@+id/activity_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:orientation="vertical"
         tools:context="com.manit.krungsri.realmmeapplication.MainActivity">
+
+        <Button
+            android:id="@+id/btnGenerate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Generate 100 students"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/edtData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine" />
 
         <TextView
             android:id="@+id/tvHello"
-            android:textSize="26sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!" />
+            android:text="Hello World!"
+            android:textSize="26sp" />
+        <TextView
+            android:id="@+id/tvHello2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            android:textSize="26sp" />
 
     </LinearLayout>
 </layout>
