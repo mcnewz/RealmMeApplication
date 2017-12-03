@@ -10,6 +10,7 @@ import io.realm.annotations.Required;
 
 
 public class Student extends RealmObject {
+
     @PrimaryKey
     int studentId;
 

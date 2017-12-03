@@ -8,8 +8,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.manit.krungsri.realmmeapplication.MainActivity">
-
+        tools:context="com.manit.krungsri.realmmeapplication.activity.MainActivity">
+        <Button
+            android:id="@+id/btnRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
         <Button
             android:id="@+id/btnGenerate"
             android:layout_width="wrap_content"

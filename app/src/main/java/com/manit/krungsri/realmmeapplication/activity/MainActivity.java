@@ -1,22 +1,23 @@
-package com.manit.krungsri.realmmeapplication;
+package com.manit.krungsri.realmmeapplication.activity;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+
+import com.manit.krungsri.realmmeapplication.R;
 import com.manit.krungsri.realmmeapplication.databinding.ActivityMainBinding;
 import com.manit.krungsri.realmmeapplication.model.Person;
 import com.manit.krungsri.realmmeapplication.model.Student;
 
 import java.util.ArrayList;
-import java.util.UUID;
 
 import io.realm.Realm;
-import io.realm.RealmQuery;
 import io.realm.RealmResults;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         super.onCreate(savedInstanceState);
-
+            
+        initinstance();
         realm = Realm.getDefaultInstance(); // opens "myrealm.realm"
 
 //        SaveDataAsynchronous("Pang", 23);
@@ -38,6 +40,18 @@ public class MainActivity extends AppCompatActivity {
         binding.btnGenerate.setOnClickListener(buttonClick);
 //        updateStudent();
         queryRealmTest();
+    }
+
+    private void initinstance() {
+        binding.btnRecyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "123", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(MainActivity.this, RecycleViewActivity.class);
+                startActivity(i);
+
+            }
+        });
     }
 
     private void queryRealmTest() {
@@ -249,6 +263,12 @@ public class MainActivity extends AppCompatActivity {
 
                     Toast.makeText(MainActivity.this, "click", Toast.LENGTH_SHORT).show();
                     generateStudent();
+
+                    break;
+
+                case R.id.btnRecyclerView:
+
+
 
                     break;
                 default:
