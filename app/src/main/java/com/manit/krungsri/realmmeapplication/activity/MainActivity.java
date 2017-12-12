@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void generateStudent() {
-        clearStudent();
+//        clearStudent();
         insertStudent();
     }
 
@@ -134,7 +134,6 @@ public class MainActivity extends AppCompatActivity {
 //                            Log.d("student", "Add student id = " + s.getStudentId());
                             text += s.toString();
                         }
-
                     }
                 }, new Realm.Transaction.OnSuccess() {
                     @Override
